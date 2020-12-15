@@ -10,9 +10,10 @@ filename handle and audio tag convert by python 파일이름을 바꾸고 오디
 2020. 12. 15
 By Emmett
 """ 
+
+
 import os
 import eyed3
-
 file_path = 'F:\\cut'
 filenames = os.listdir(file_path)
 print(filenames)
