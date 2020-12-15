@@ -11,7 +11,7 @@ filename handle and audio tag convert by python 파일이름을 바꾸고 오디
 By Emmett
 """ 
 
-
+""" 라이브러리 """
 import os
 import eyed3
 file_path = 'F:\\cut'
