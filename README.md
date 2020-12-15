@@ -22,7 +22,7 @@ for name in filenames:
     src = os.path.join(file_path, name)
     audiofile = eyed3.load(src);
 
-    # 자르고 어쩌고 저쩌고 해서 최종 dst를 만드는 과정
+    """ 자르고 어쩌고 저쩌고 해서 최종 dst를 만드는 과정 """
     tt = name.split('_')
     ttf = '%04d' % (int(tt[0]) + 7000)
     mdst = str(ttf)
@@ -30,7 +30,7 @@ for name in filenames:
     for i in range(1, len(tt)):
         mdst = mdst + "_" + tt[i]
 
-    # 여기는 오디오 태그를 정리 하는 곳입니다.
+    """ 여기는 오디오 태그를 정리 하는 곳입니다. """
     audiofile.tag.artist = "SBLabs 2020.12.15"
     audiofile.tag.title = mdst
 
@@ -39,7 +39,7 @@ for name in filenames:
     audiofile.tag.track_num =  ttf
     audiofile.tag.save()
 
-    # 여기는 파일 이름을 정리 하는 곳이빈다.
+    """ 여기는 파일 이름을 정리 하는 곳이구요."""
     print(name + "\t\t\t>>>" + '{' + tt[0] + '}' + '{' + tt[1] + '}' + "\t>>>" + str(ttf) + "\tdst>>>" + mdst)
     ddst = ddst + ".mp3"
     dst = os.path.join(file_path, ddst)
