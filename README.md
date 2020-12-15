@@ -12,6 +12,8 @@ By Emmett
 """ 
 
 """ 라이브러리 """
+
+
 import os
 import eyed3
 file_path = 'F:\\cut'
